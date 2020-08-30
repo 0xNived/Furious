@@ -226,7 +226,7 @@ bot.on("message", message => {
 
 bot.on("message", async message => {
   if (message.content.startsWith(prefix + "stats")) {
-message.delete()
+
   if (
       message.author.id == authors[0] ||
       message.author.id == authors[1] ||
