@@ -1,0 +1,29 @@
+{
+  "name": "templefate-discord-bot",
+  "version": "0.0.1",
+  "description": "A template for creating Discord bots",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.2.0",
+    "moment": "^2.27.0",
+    "superagent": "^5.2.2",
+    "quick.db": "^7.1.1"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/template-discord-bot"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
