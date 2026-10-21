@@ -1,29 +1,30 @@
 {
-  "name": "templefate-discord-bot",
-  "version": "0.0.1",
-  "description": "A template for creating Discord bots",
-  "main": "server.js",
+  "name": "furious",
+  "version": "1.0.0",
+  "description": "Discord bot built to protect your server with powerful moderation and security tools.",
+  "main": "src/index.js",
+  "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "deploy": "node src/deploy-commands.js",
+    "test": "node --test",
+    "test:watch": "node --test --watch",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "moderation",
+    "security"
+  ],
+  "author": "0xNived",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^9.1.7"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "discord.js": "^11.5.1",
-    "dotenv": "^8.2.0",
-    "moment": "^2.27.0",
-    "superagent": "^5.2.2",
-    "quick.db": "^7.1.1"
-  },
-  "engines": {
-    "node": "8.x"
-  },
-  "repository": {
-    "url": "https://glitch.com/edit/#!/template-discord-bot"
-  },
-  "license": "MIT",
-  "keywords": [
-    "node",
-    "glitch",
-    "express"
-  ]
+    "discord.js": "^14.27.0",
+    "dotenv": "^18.0.8"
+  }
 }
