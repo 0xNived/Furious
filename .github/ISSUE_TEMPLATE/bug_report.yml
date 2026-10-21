@@ -1,0 +1,89 @@
+name: "🐛 Bug Report"
+description: Report a bug or unexpected behavior in Furious
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the details below so we can investigate.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of the bug.
+      placeholder: "Describe what happened..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this issue?
+      placeholder: |
+        1. Run command `/ban @user`
+        2. Bot responds with...
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+    validations:
+      required: true
+
+  - type: input
+    id: bot-version
+    attributes:
+      label: Bot Version
+      description: Which version of Furious are you running?
+      placeholder: "e.g., v1.0.0 or commit hash"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: hosting
+    attributes:
+      label: Hosting Environment
+      options:
+        - Self-hosted (VPS/VM)
+        - Local machine
+        - Docker
+        - Railway / Render / Heroku
+        - Other
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs / Screenshots
+      description: Paste any error logs, console output, or screenshots here.
+      render: shell
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched existing issues to make sure this isn't a duplicate.
+          required: true
+        - label: I am running the latest version of Furious.
+          required: false

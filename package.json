@@ -1,0 +1,30 @@
+{
+  "name": "furious",
+  "version": "1.0.0",
+  "description": "Discord bot built to protect your server with powerful moderation and security tools.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "deploy": "node src/deploy-commands.js",
+    "test": "node --test",
+    "test:watch": "node --test --watch",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "moderation",
+    "security"
+  ],
+  "author": "0xNived",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  },
+  "dependencies": {
+    "discord.js": "^14.27.0",
+    "dotenv": "^18.0.8"
+  }
+}
