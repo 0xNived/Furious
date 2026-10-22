@@ -1,18 +1,9 @@
 # Commands
 
-<!-- Fill this in as you build commands -->
-
-## Moderation
-
-| Command | Description | Permission |
-|---------|-------------|------------|
-| `/ban`  | —           | —          |
-| `/kick` | —           | —          |
-| `/mute` | —           | —          |
-| `/warn` | —           | —          |
-
 ## Utility
 
 | Command | Description | Permission |
-|---------|-------------|------------|
-| `/help` | —           | —          |
+| --- | --- | --- |
+| `/ping` or `!ping` | Checks whether Onion is online. | Everyone |
+
+Register slash commands with `npm run deploy`. Prefix commands need the Message Content Intent.
