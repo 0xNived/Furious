@@ -17,6 +17,8 @@ test("the command loader finds slash and prefix commands in categories", async (
   assert.ok(commands.prefixCommands.has("snipelist"));
   assert.ok(commands.slashCommands.has("invites"));
   assert.ok(commands.prefixCommands.has("invites"));
+  assert.ok(commands.slashCommands.has("inviter"));
+  assert.ok(commands.prefixCommands.has("inviter"));
 });
 
 test("the handlers run the matching slash and prefix command", async () => {

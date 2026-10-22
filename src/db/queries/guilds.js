@@ -72,7 +72,24 @@ export async function getInviteStats(guildId, inviterId) {
   return stats;
 }
 
+export async function getMemberInviter(guildId, userId) {
+  const database = getDatabase();
+  const [join] = await database
+    .select({
+      inviterId: inviteJoins.inviterId,
+      inviteCode: inviteJoins.inviteCode,
+      joinedAt: inviteJoins.joinedAt,
+    })
+    .from(inviteJoins)
+    .where(and(eq(inviteJoins.guildId, guildId), eq(inviteJoins.userId, userId)))
+    .orderBy(desc(inviteJoins.joinedAt))
+    .limit(1);
+
+  return join ?? null;
+}
+
 export const guildData = {
+  getMemberInviter,
   getInviteLogChannel,
   getInviteStats,
   recordGuildLog,
