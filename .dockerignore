@@ -1,0 +1,12 @@
+.agent
+.env
+.env.*
+.git
+.github
+.husky
+.owneronly
+node_modules
+tests
+docs
+README.md
+*.log
