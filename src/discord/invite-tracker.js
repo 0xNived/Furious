@@ -31,4 +31,10 @@ export async function findUsedInvite(guild) {
   return [...current.values()].find((invite) => invite.uses > (previous.get(invite.code)?.uses ?? 0)) ?? null;
 }
 
-export const inviteTracker = { findUsedInvite, syncInvites };
+export async function syncGuildInvites(guilds) {
+  for (const guild of guilds) {
+    await syncInvites(guild);
+  }
+}
+
+export const inviteTracker = { findUsedInvite, syncGuildInvites, syncInvites };

@@ -10,6 +10,7 @@
 | `/snipelist`, `!snipelist`, or `,snipelist` | Shows your 10 most recent snipes privately. | Everyone |
 | `/invites me` or `,invites` | Shows your invite totals for this server. | Everyone |
 | `/invites log #channel` or `,invites log #channel` | Sets the channel for invite join logs. | Manage Server |
+| `/inviter member:@member` or `,inviter @member` | Shows who invited a member, when Onion has tracked their join. | Everyone |
 
 Register slash commands with `npm run deploy`. Prefix commands need the Message Content Intent.
 
@@ -26,3 +27,5 @@ Only the latest deleted non-bot message in a channel is available. It expires af
 Use `/invites log #channel` or `,invites log #channel` to configure join logs. Onion compares current invite use counts with its saved snapshot to identify the inviter. Logs show the joining user, account creation date, inviter, joined time, avatar, and moderator Kick/Ban buttons.
 
 `/invites me` or `,invites` shows invite uses attributed to you: current members, total joins, departures, and accounts younger than seven days. Every rejoin counts as another invite use.
+
+Use `/inviter member:@member` or `,inviter @member` to look up the inviter for that member's latest tracked join. It shows **Unknown** when Onion did not observe the join or could not identify the invite.
