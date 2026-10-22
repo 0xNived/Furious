@@ -6,9 +6,8 @@
 
 If you discover a security vulnerability in Onion, please report it responsibly:
 
-1. **Email:** Send details to your preferred contact (e.g., `security@yourdomain.com`)
-2. **Discord DM:** Contact the project owner directly on Discord.
-3. **GitHub Security Advisories:** Use the [private vulnerability reporting](https://github.com/0xNived/Onion-Bot/security/advisories/new) feature.
+1. **Email:** Send details to `onion@nived.dev`.
+2. **GitHub Security Advisories:** Use [private vulnerability reporting](https://github.com/0xNived/Onion-Bot/security/advisories/new).
 
 ### What to Include
 
