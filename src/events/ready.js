@@ -12,13 +12,11 @@ export default {
       }.`,
     );
 
-    for (const guild of client.guilds.cache.values()) {
-      try {
-        await inviteTracker.syncInvites(guild);
-      } catch (error) {
-        logger.warn(`Could not sync invites for ${guild.id}.`);
-        logger.error("Invite sync failed.", error);
-      }
+    try {
+      await inviteTracker.syncGuildInvites(client.guilds.cache.values());
+    } catch (error) {
+      logger.warn("Could not sync every guild invite snapshot.");
+      logger.error("Invite sync failed.", error);
     }
   },
 };
