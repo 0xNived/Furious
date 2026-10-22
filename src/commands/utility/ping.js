@@ -1,7 +1,5 @@
 import { InteractionContextType, SlashCommandBuilder } from "discord.js";
 
-const reply = "Pong!";
-
 /**
  * A small command used to verify that both command entry points work.
  *
@@ -17,11 +15,17 @@ export default {
     .setDescription("Check whether Onion is online.")
     .setContexts(InteractionContextType.Guild),
 
-  async executeSlash(interaction) {
-    return interaction.reply(reply);
+  async executeSlash(interaction, { pingStats }) {
+    const totals = await pingStats.record(interaction.user.id);
+    return interaction.reply(createPingReply(totals));
   },
 
-  async executePrefix(message) {
-    return message.reply(reply);
+  async executePrefix(message, _args, { pingStats }) {
+    const totals = await pingStats.record(message.author.id);
+    return message.reply(createPingReply(totals));
   },
 };
+
+function createPingReply({ global, user }) {
+  return `🏓 **Pong!**\nGlobal pings: **${global}**\nYour pings: **${user}**`;
+}

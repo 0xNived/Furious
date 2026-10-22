@@ -8,6 +8,8 @@
     "start": "node src/index.js",
     "dev": "node --watch src/index.js",
     "deploy": "node src/scripts/deploy-commands.js",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
     "test": "node --test",
     "test:watch": "node --test --watch",
     "prepare": "husky"
@@ -21,11 +23,15 @@
   "author": "0xNived",
   "license": "ISC",
   "devDependencies": {
+    "@types/pg": "^8.23.1",
+    "drizzle-kit": "^0.31.11",
     "husky": "^9.1.7"
   },
   "dependencies": {
     "discord.js": "^14.27.0",
     "dotenv": "^18.0.8",
+    "drizzle-orm": "^0.45.4",
+    "pg": "^8.23.1",
     "tinyrainbow": "^3.2.0"
   }
 }
