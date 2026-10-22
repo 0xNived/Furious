@@ -9,6 +9,14 @@ test("the command loader finds slash and prefix commands in categories", async (
 
   assert.ok(commands.slashCommands.has("ping"));
   assert.ok(commands.prefixCommands.has("ping"));
+  assert.ok(commands.slashCommands.has("level"));
+  assert.ok(commands.prefixCommands.has("level"));
+  assert.ok(commands.slashCommands.has("snipe"));
+  assert.ok(commands.prefixCommands.has("snipe"));
+  assert.ok(commands.slashCommands.has("snipelist"));
+  assert.ok(commands.prefixCommands.has("snipelist"));
+  assert.ok(commands.slashCommands.has("invites"));
+  assert.ok(commands.prefixCommands.has("invites"));
 });
 
 test("the handlers run the matching slash and prefix command", async () => {
@@ -22,8 +30,12 @@ test("the handlers run the matching slash and prefix command", async () => {
     {
       isChatInputCommand: () => true,
       commandName: "ping",
+      user: { id: "123" },
     },
-    { slashCommands: new Map([["ping", command]]) },
+    {
+      slashCommands: new Map([["ping", command]]),
+      xpStats: { recordActivity: async () => {} },
+    },
   );
 
   await messageCreate.execute(
@@ -32,7 +44,11 @@ test("the handlers run the matching slash and prefix command", async () => {
       author: { bot: false },
       content: "!ping now",
     },
-    { prefixCommands: new Map([["ping", command]]), prefix: "!" },
+    {
+      prefixCommands: new Map([["ping", command]]),
+      prefixes: ["!", ","],
+      xpStats: { recordActivity: async () => {} },
+    },
   );
 
   assert.deepEqual(replies, ["slash", "now"]);

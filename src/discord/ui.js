@@ -13,6 +13,7 @@ import {
   TextInputBuilder,
   TextInputStyle,
 } from "discord.js";
+import { theme } from "./theme.js";
 
 /**
  * @typedef {import("discord.js").ButtonBuilder} Button
@@ -39,7 +40,7 @@ export function createEmbed({
   title,
   description,
   fields = [],
-  color = 0x5865f2,
+  color = theme.accent,
   footer,
   timestamp = true,
 }) {

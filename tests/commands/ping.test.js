@@ -11,10 +11,23 @@ test("ping exposes a valid slash command", () => {
 
 test("ping replies through both command entry points", async () => {
   const replies = [];
-  const target = { reply: async (message) => replies.push(message) };
+  const pingStats = {
+    record: async () => ({ global: 42, user: 3 }),
+  };
+  const slashTarget = {
+    user: { id: "123" },
+    reply: async (message) => replies.push(message),
+  };
+  const prefixTarget = {
+    author: { id: "456" },
+    reply: async (message) => replies.push(message),
+  };
 
-  await ping.executeSlash(target);
-  await ping.executePrefix(target);
+  await ping.executeSlash(slashTarget, { pingStats });
+  await ping.executePrefix(prefixTarget, [], { pingStats });
 
-  assert.deepEqual(replies, ["Pong!", "Pong!"]);
+  assert.deepEqual(replies, [
+    "🏓 **Pong!**\nGlobal pings: **42**\nYour pings: **3**",
+    "🏓 **Pong!**\nGlobal pings: **42**\nYour pings: **3**",
+  ]);
 });

@@ -4,14 +4,15 @@ import { logger } from "../logging/logger.js";
 export default {
   name: Events.InteractionCreate,
 
-  async execute(interaction, { slashCommands }) {
+  async execute(interaction, context) {
     if (!interaction.isChatInputCommand()) return;
 
-    const command = slashCommands.get(interaction.commandName);
+    const command = context.slashCommands.get(interaction.commandName);
     if (!command) return;
 
     try {
-      await command.executeSlash(interaction);
+      await context.xpStats.recordActivity(interaction.guildId, interaction.user.id);
+      await command.executeSlash(interaction, context);
     } catch (error) {
       logger.error(`Slash command /${interaction.commandName} failed.`, error);
       await replyWithError(interaction);
