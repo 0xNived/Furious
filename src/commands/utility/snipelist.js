@@ -35,7 +35,7 @@ function createHistoryResponse(entries) {
     const content = entry.content || "*Image or attachment only*";
     const preview = content.length > 70 ? `${content.slice(0, 67)}...` : content;
     const time = Math.floor(entry.snipedAt.getTime() / 1000);
-    return `**${index + 1}.** <#${entry.channelId}> · <t:${time}:R>\n${preview}`;
+    return `**${index + 1}.** <#${entry.channelId}> · <t:${time}:R>\nBy <@${entry.authorId}> · ${preview}`;
   });
 
   return {
