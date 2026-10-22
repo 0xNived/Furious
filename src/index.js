@@ -4,6 +4,7 @@ import { closeDatabase } from "./db/client.js";
 import { guildData } from "./db/queries/guilds.js";
 import { pingStats } from "./db/queries/pings.js";
 import { snipedMessages } from "./db/queries/snipe-history.js";
+import { warningData } from "./db/queries/warnings.js";
 import { xpStats } from "./db/queries/xp.js";
 import { snipeCache } from "./discord/snipe-cache.js";
 import { inviteTracker } from "./discord/invite-tracker.js";
@@ -46,6 +47,7 @@ await registerEvents(client, {
   inviteTracker,
   snipeCache,
   snipedMessages,
+  warningData,
   xpStats,
 });
 
