@@ -24,7 +24,7 @@ Only the latest deleted non-bot message in a channel is available. It expires af
 
 ## Invites
 
-Use `/invites log #channel` or `,invites log #channel` to configure join logs. Onion compares current invite use counts with its saved snapshot to identify the inviter. Logs show the joining user, account creation date, inviter, joined time, avatar, and moderator Kick/Ban buttons.
+Use `/invites log #channel` or `,invites log #channel` to configure join logs. Onion compares current invite use counts with its saved snapshot to identify the inviter. It only attributes a join when one tracked invite increases by one; overlapping joins, vanity links, expired one-use links, and missed snapshots show **Unknown** instead of naming the wrong person. Logs show the joining user, account creation date, inviter, joined time, avatar, and moderator Kick/Ban buttons.
 
 `/invites me` or `,invites` shows invite uses attributed to you: current members, total joins, departures, and accounts younger than seven days. Every rejoin counts as another invite use.
 
