@@ -18,7 +18,8 @@ export default {
   async executePrefix(message, _args, { snipedMessages }) {
     const entries = await snipedMessages.history(message.author.id);
     const { flags: _flags, ...response } = createHistoryResponse(entries);
-    return message.reply(response);
+    await message.author.send(response);
+    return message.reply("I sent your private snipe history in a DM.");
   },
 };
 

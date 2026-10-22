@@ -7,7 +7,7 @@
 | `/ping` or `!ping` | Checks whether Onion is online and shows global and personal ping totals. | Everyone |
 | `/level [member]` or `!level [@member]` | Shows server experience, level progress, and rank. | Everyone |
 | `/snipe`, `!snipe`, or `,snipe` | Shows the latest deleted message from this channel within 30 seconds. | Everyone |
-| `/snipelist`, `!snipelist`, or `,snipelist` | Shows your 10 most recent snipes. | Everyone |
+| `/snipelist`, `!snipelist`, or `,snipelist` | Shows your 10 most recent snipes privately. | Everyone |
 | `/invites me` or `,invites` | Shows your invite totals for this server. | Everyone |
 | `/invites log #channel` or `,invites log #channel` | Sets the channel for invite join logs. | Manage Server |
 
