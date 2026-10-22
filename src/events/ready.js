@@ -1,4 +1,4 @@
-import { Events } from "discord.js";
+import { ActivityType, Events } from "discord.js";
 import { logger } from "../logging/logger.js";
 
 export default {
@@ -6,6 +6,11 @@ export default {
   once: true,
 
   async execute(client, { inviteTracker, slashCommands }) {
+    client.user.setPresence({
+      activities: [{ name: "every layer, assured", type: ActivityType.Watching }],
+      status: "online",
+    });
+
     logger.info(
       `Onion is online as ${client.user.tag} with ${slashCommands.size} command${
         slashCommands.size === 1 ? "" : "s"
