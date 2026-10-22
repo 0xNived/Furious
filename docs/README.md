@@ -1,6 +1,6 @@
-# Furious Documentation
+# Onion Documentation
 
-Guides and references for setting up, configuring, and using Furious.
+Guides and references for setting up, configuring, and using Onion.
 
 ## Contents
 

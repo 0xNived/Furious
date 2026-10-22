@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Furious</h1>
+  <h1>Onion</h1>
   <p>A focused Discord bot for safer, better-managed communities.</p>
   <p>
     <img src="https://img.shields.io/badge/status-active%20development-7c3aed?style=flat-square" alt="Status: active development">
@@ -10,15 +10,15 @@
 
 ---
 
-## What is Furious?
+## What is Onion?
 
-Furious is a Discord bot project for community moderation, security, and useful server tools. It is being built as one clear place for the features a server needs to stay organised and protected.
+Onion is a Discord bot project for community moderation, security, and useful server tools. It is being built as one clear place for the features a server needs to stay organised and protected.
 
 The project is in active development. Features listed below describe the direction of the bot, not a promise that every feature is already available.
 
 ## Direction
 
-Furious will focus on a small set of practical areas:
+Onion will focus on a small set of practical areas:
 
 - **Moderation** — tools for handling harmful or disruptive behaviour.
 - **Security** — protection and controls for server administration.
@@ -35,8 +35,8 @@ Furious will focus on a small set of practical areas:
 ### Install
 
 ```bash
-git clone https://github.com/0xNived/Furious.git
-cd Furious
+git clone https://github.com/0xNived/Onion-Bot.git Onion
+cd Onion
 npm install
 ```
 
@@ -68,7 +68,7 @@ The command list and setup notes will grow with the bot:
 
 ## Contributing
 
-Keep changes focused, test them where possible, and use clear commit messages. See the repository’s [commit guide](.agent/COMMITS.md) for the format used here.
+Keep changes focused, test them where possible, and use clear conventional commit messages.
 
 ## License
 

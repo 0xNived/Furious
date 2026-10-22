@@ -1,5 +1,5 @@
 name: "🐛 Bug Report"
-description: Report a bug or unexpected behavior in Furious
+description: Report a bug or unexpected behavior in Onion
 title: "[Bug]: "
 labels: ["bug", "triage"]
 assignees: []
@@ -51,7 +51,7 @@ body:
     id: bot-version
     attributes:
       label: Bot Version
-      description: Which version of Furious are you running?
+      description: Which version of Onion are you running?
       placeholder: "e.g., v1.0.0 or commit hash"
     validations:
       required: false
@@ -85,5 +85,5 @@ body:
       options:
         - label: I have searched existing issues to make sure this isn't a duplicate.
           required: true
-        - label: I am running the latest version of Furious.
+        - label: I am running the latest version of Onion.
           required: false

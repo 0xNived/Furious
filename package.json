@@ -1,5 +1,5 @@
 {
-  "name": "furious",
+  "name": "onion",
   "version": "1.0.0",
   "description": "Discord bot built to protect your server with powerful moderation and security tools.",
   "main": "src/index.js",

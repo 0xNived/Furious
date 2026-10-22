@@ -4,11 +4,11 @@
 
 **⚠️ Please do NOT open a public GitHub issue for security vulnerabilities.**
 
-If you discover a security vulnerability in Furious, please report it responsibly:
+If you discover a security vulnerability in Onion, please report it responsibly:
 
 1. **Email:** Send details to your preferred contact (e.g., `security@yourdomain.com`)
 2. **Discord DM:** Contact the project owner directly on Discord.
-3. **GitHub Security Advisories:** Use the [private vulnerability reporting](https://github.com/0xNived/Furious/security/advisories/new) feature.
+3. **GitHub Security Advisories:** Use the [private vulnerability reporting](https://github.com/0xNived/Onion-Bot/security/advisories/new) feature.
 
 ### What to Include
 
@@ -40,7 +40,7 @@ If you discover a security vulnerability in Furious, please report it responsibl
 
 ## Scope
 
-This policy covers the Furious Discord bot codebase. It does **not** cover:
+This policy covers the Onion Discord bot codebase. It does **not** cover:
 - Third-party dependencies (report those to their respective maintainers)
 - Your own server configuration or hosting environment
 - Discord platform vulnerabilities (report those to [Discord](https://discord.com/security))

@@ -9,8 +9,8 @@
 ## Installation
 
 ```bash
-git clone https://github.com/0xNived/Furious.git
-cd Furious
+git clone https://github.com/0xNived/Onion-Bot.git Onion
+cd Onion
 npm install
 ```
 

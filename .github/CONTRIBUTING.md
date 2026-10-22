@@ -1,6 +1,6 @@
-# Contributing to Furious
+# Contributing to Onion
 
-First off, thanks for considering contributing to Furious! 🎉 Every contribution helps make this bot better for everyone.
+First off, thanks for considering contributing to Onion! 🎉 Every contribution helps make this bot better for everyone.
 
 ## Table of Contents
 
@@ -18,12 +18,12 @@ This project adheres to a [Code of Conduct](CODE_OF_CONDUCT.md). By participatin
 ## How Can I Contribute?
 
 ### 🐛 Reporting Bugs
-- Use the [Bug Report](https://github.com/0xNived/Furious/issues/new?template=bug_report.yml) issue template.
+- Use the [Bug Report](https://github.com/0xNived/Onion-Bot/issues/new?template=bug_report.yml) issue template.
 - Include as much detail as possible: steps to reproduce, expected vs actual behavior, logs, and your environment.
 
 ### ✨ Suggesting Features
-- Use the [Feature Request](https://github.com/0xNived/Furious/issues/new?template=feature_request.yml) template.
-- Explain the problem your feature solves and why it benefits Furious users.
+- Use the [Feature Request](https://github.com/0xNived/Onion-Bot/issues/new?template=feature_request.yml) template.
+- Explain the problem your feature solves and why it benefits Onion users.
 
 ### 🔧 Submitting Code
 1. Fork the repository.
@@ -35,8 +35,8 @@ This project adheres to a [Code of Conduct](CODE_OF_CONDUCT.md). By participatin
 
 ```bash
 # 1. Clone your fork
-git clone https://github.com/YOUR_USERNAME/Furious.git
-cd Furious
+git clone https://github.com/YOUR_USERNAME/Onion-Bot.git Onion
+cd Onion
 
 # 2. Install dependencies
 npm install
@@ -76,4 +76,4 @@ When reporting bugs, please include:
 
 ---
 
-Thank you for helping make Furious better! 💪
+Thank you for helping make Onion better! 💪
